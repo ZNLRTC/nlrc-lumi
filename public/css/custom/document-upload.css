@@ -1,0 +1,32 @@
+#document-completion-popover {
+    max-width: 480px;
+}
+
+.completion-progress {
+    border-radius: 9999px;
+
+    /* These are based in document-upload.js */
+    /* If you change these values or from the js, both files must be checked */
+    background: conic-gradient(
+        var(--inner-circle-color) calc(var(--progress-value) * 3.6deg),
+        var(--backdrop-circle-color) calc(var(--progress-value) * 3.6deg)
+    );
+
+    &::before {
+        content: '';
+        position: absolute;
+        height: 75%;
+        width: 75%;
+        background-color: #ffffff;
+        border-radius: 9999px;
+    }
+
+    &.dark::before {
+        background-color: #0f172a;
+    }
+
+    & > .progress-percent {
+        font-family: 'Poppins', sans-serif;
+        z-index: 2;
+    }
+}

@@ -1,0 +1,226 @@
+$lblue: #0C72BA;
+$dblue: #03365c;
+body { min-width: 405px; }
+
+.card-row { margin-top: 1.5rem; }
+
+.card {
+    padding: 1rem;
+    height: 100%;
+    transition: 0.3s ease;
+    color: white;
+    
+    span { 
+        font-size: 14px;
+        line-height: 16px;
+    }
+    span:nth-child(1){ display: flex; }
+
+    svg { 
+        width: 14px;
+        margin-left: 5px;
+        fill: white;
+    }
+}
+
+.card:hover {
+    scale: 103%;
+    cursor: pointer;
+}
+
+.c-body:nth-child(1) .card { background: linear-gradient(120deg, rgb(255,110,104,1) 0%,rgba(254,88,90,1) 50%); }
+.c-body:nth-child(2) .card { background: linear-gradient(120deg, rgba(110,148,254,1) 0%, rgba(119,80,249,1) 50%); }
+.c-body:nth-child(3) .card { background: linear-gradient(120deg, rgba(255,208,115,1) 0%, rgba(255,179,129,1) 50%); }
+.c-body:nth-child(4) .card { background: linear-gradient(120deg, rgb(40, 218, 82) 0%, rgb(45, 168, 34) 50%); }
+
+.table-row { padding: 0 12px; }
+.search-row {
+    text-align: right;
+    border-bottom: 1px solid white;
+
+    div {
+        display: flex;
+        justify-content: flex-end;
+    }
+    input {
+        border-radius: 50px 0 0 50px;
+        box-shadow: none !important;
+        border: none;
+        color: black;
+        font-weight: 300;
+        font-size: 14px;
+        padding: 4px 12px;
+    }
+
+    input::placeholder {
+        color: gray;
+        font-style: italic;
+    }
+
+    button {
+        width: 35px;
+        background-color: white;
+        border-radius: 0 50px 50px 0;
+        padding: 10px;
+        svg {
+            fill: $dblue;
+        }
+    }
+}
+
+#quiz-table { 
+    width: 100%;
+    text-align: left;
+    margin-top: 1.5rem;
+}
+
+#quiz-table thead { color:white; }
+
+th, td {
+    padding: 0.75rem 1.5rem 0.75rem 1.5rem;
+}
+
+.version {
+    font-style: italic;
+    font-size: 12px;
+    color: $lblue;
+}
+
+tbody tr { border-bottom: 1px solid $dblue; }
+td { vertical-align: top; }
+
+.action-head {
+    display: flex;
+    justify-content: flex-end;
+
+    svg {
+        width: 17px;
+        fill: white;
+    }
+
+    svg:hover {
+        opacity: 0.7;
+    }
+}
+
+.action-td {
+    display: flex;
+    justify-content: space-between;
+
+    .button-group { display: flex; }
+
+    a, button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 2px;
+        color: white;
+        padding: 6px 15px;
+        border-radius: 16px;
+        height: 33px;
+        line-height: 0;
+
+        svg { width: 15px; }
+    }
+
+    a.bg-nlrc-blue-500,
+    button.bg-nlrc-blue-500 {
+        svg { fill: white }
+    }
+
+    a:hover,
+    button:hover {
+        transition: 0.3s ease;
+        box-shadow: 0px 0px 7px darkgray;
+    }
+
+    span {
+        font-size: 11px;
+        cursor: pointer;
+    }
+
+    span.active { color:green; }
+    span.inactive { color:red; }
+}
+
+tbody tr:hover {
+    transition: 0.2s ease;
+    background-color: rgba(12,114,186,0.1);
+}
+
+.title-column,
+.description-column,
+.creator-column,
+.response-column,
+.attempt-column,
+.score-column {
+    position: relative;
+    * { display: block; }
+    span { 
+        font-size: 11px;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    svg {
+        min-width: 10px;
+        width: 10px;
+        margin-top: 3px;
+        margin-right: 3px;
+    }
+}
+
+
+.sub-tr {
+    color: gray;
+    font-size: 90%;
+    border-bottom: 1px solid lightgray;
+    i { font-size: 90%; }
+
+    .title-column {
+        div.d-flex{
+            display: flex;
+            svg {
+                width: 16px;
+            }
+
+            div {
+                margin-right: 5px;
+                padding-left: 5px;
+                svg {
+                    fill: gray;
+                    width: 10px;
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------------------------
+Tablet
+------------------------------------------------------------------------------*/
+@media (max-width: 991px) {
+    .created-by { display: none; }
+
+    .action-td .button-group {
+        flex-direction: column;
+        a { margin-bottom: 5px; }
+    }
+    
+    .sub-tr .action-td a {
+        height: auto;
+        line-height: 16px;
+    }
+}
+
+/*------------------------------------------------------------------------------
+Mobile
+------------------------------------------------------------------------------*/
+@media (max-width: 768px)  {
+    .title-column svg, 
+    .description,
+    .attempts,
+    .action-td a svg { display: none; }
+
+    th, td { padding: 12px; }
+}

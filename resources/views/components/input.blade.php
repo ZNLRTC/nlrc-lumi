@@ -1,0 +1,3 @@
+@props(['disabled' => false])
+
+<input {{ $disabled ? 'disabled' : '' }} {!! $attributes->merge(['class' => 'rounded-md shadow-sm border-slate-300 dark:border-slate-700 focus:border-nlrc-blue-500 dark:focus:border-nlrc-blue-500 checked:bg-nlrc-blue-500 checked:focus:bg-nlrc-blue-500 focus:ring-nlrc-blue-500 dark:focus:ring-nlrc-blue-500 focus:ring-nlrc-blue-600 dark:focus:ring-offset-nlrc-blue-700 placeholder:italic placeholder:text-slate-400 dark:placeholder:text-slate-500 disabled:bg-nlrc-blue-100 dark:disabled:bg-nlrc-blue-700 disabled:text-slate-400 dark:disabled:text-slate-500 dark:bg-nlrc-blue-900 dark:text-slate-300 read-only:bg-nlrc-blue-100 dark:read-only:bg-nlrc-blue-700 read-only:text-slate-400 dark:read-only:text-slate-500']) !!}>

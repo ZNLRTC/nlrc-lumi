@@ -1,0 +1,176 @@
+/*--------------------------------------------------------
+UNIVERSALS
+--------------------------------------------------------*/
+$lblue: #0C72BA;
+$dblue: #085389;
+$green: #005C44;
+$red: #DC3546;
+
+/*--------------------------------------------------------
+RESETS
+--------------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: bold;
+    }
+
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.5em; }
+    h3 {font-size: 1.17em; }
+    h4 { font-size: 1em; }
+    h5 { font-size: 0.83em; }
+    h6 { font-size: 0.67em;}
+}
+
+/*--------------------------------------------------------
+GENERAL STYLES
+--------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+    font-size: 14px;
+}
+
+a,
+a:focus,
+a:hover,
+a:active {
+    outline: 0;
+    text-decoration: none;
+}
+
+/*--------------------------------------------------------
+CUSTOM CLASS
+--------------------------------------------------------*/
+.t-lblue { color: $lblue; }
+.t-dblue { color: $dblue; }
+.t-red {color: red; }
+
+.bg-lblue { background-color: $lblue; }
+.bg-dblue { background-color: $dblue; }
+.border-red { border: 1px solid red !important; }
+
+/*--------------------------------------------------------
+ALERTS
+--------------------------------------------------------*/
+.alert {
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 3px;;
+}
+
+.alert-success {
+    background-color: $green;
+    color:white;
+}
+
+.alert-danger {
+    background-color: $red;
+    color:white;
+}
+
+/*--------------------------------------------------------
+CUSTOM BUTTONS
+--------------------------------------------------------*/
+.btn { 
+    border-radius: 5px;
+    padding: 0.5rem;
+    transition: 0.3s ease;
+}
+
+.btn-lblue {
+    color: white;
+    background-color: $lblue;
+    border: 1px solid white;
+
+    svg { fill: white; }
+}
+    .btn-lblue:hover,
+    .btn-lblue:focus,
+    .btn-lblue:active,
+    .btn-lblue.active,
+    .open > .dropdown-toggle.btn-lblue {
+        color: $lblue;
+        background-color: white;
+        border: 1px solid $lblue;
+
+        svg { fill: $lblue; }
+    }
+
+    .btn-dblue {
+        color: white;
+        background-color: $dblue;
+        border: 1px solid white;
+
+        svg { fill: white; }
+    }
+        .btn-dblue:hover,
+        .btn-dblue:focus,
+        .btn-dblue:active,
+        .btn-dblue.active,
+        .open > .dropdown-toggle.btn-dblue {
+            color: $dblue;
+            background-color: white;
+            border: 1px solid $dblue;
+
+            svg { fill: $dblue; }
+        }
+
+/*--------------------------------------------------------
+Others
+--------------------------------------------------------*/
+.d-none { display: none; }
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+[class^="col-"] { padding: 0 12px; }
+[class^="col-md-"] { flex: 0 0 auto; }
+
+@media (min-width: 768px) {
+    .col-md-1 { width: calc(100% / 12); }
+    .col-md-2 { width: calc((100% / 12) * 2); }
+    .col-md-3 { width: calc((100% / 12) * 3); }
+    .col-md-4 { width: calc((100% / 12) * 4); }
+    .col-md-5 { width: calc((100% / 12) * 5); }
+    .col-md-6 { width: calc((100% / 12) * 6); }
+    .col-md-7 { width: calc((100% / 12) * 7); }
+    .col-md-8 { width: calc((100% / 12) * 8); }
+    .col-md-9 { width: calc((100% / 12) * 9); }
+    .col-md-10 { width: calc((100% / 12) * 10); }
+    .col-md-11 { width: calc((100% / 12) * 11); }
+    .col-md-12 { width: calc((100% / 12) * 12); }
+
+    .offset-md-0 { margin-left: 0; }
+    .offset-md-1 { margin-left: calc(100% / 12); }
+    .offset-md-2 { margin-left: calc((100% / 12) * 2); }
+    .offset-md-3 { margin-left: calc((100% / 12) * 3); }
+    .offset-md-4 { margin-left: calc((100% / 12) * 4); }
+    .offset-md-5 { margin-left: calc((100% / 12) * 5); }
+    .offset-md-6 { margin-left: calc((100% / 12) * 6); }
+    .offset-md-7 { margin-left: calc((100% / 12) * 7); }
+    .offset-md-8 { margin-left: calc((100% / 12) * 8); }
+    .offset-md-9 { margin-left: calc((100% / 12) * 9); }
+    .offset-md-10 { margin-left: calc((100% / 12) * 10); }
+    .offset-md-11 { margin-left: calc((100% / 12) * 11); }
+}
+
+@media (max-width: 767.98px) {
+    [class^="col-md-"] {
+        flex: 1 0 100%; /* Allow columns to take full width on mobile */
+        width: 100%; /* Ensure width is 100% */
+    }
+}

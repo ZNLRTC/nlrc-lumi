@@ -1,0 +1,64 @@
+$lblue: #0C72BA;
+$dblue: #03365c;
+
+#quiz_form {
+    .title-div {
+        background-color: $dblue !important;
+        color: white;
+
+        div {
+            border-bottom: none !important;
+            font-size: 16px;
+            width: 90%;
+            span {
+                font-style: italic;
+                display: block;
+                margin: -5px 0 10px 0 !important;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .question-form {
+        .question,
+        .question-type,
+        .written-div .option-con,
+        .option-con .option,
+        .explanation {
+            padding: 8px;
+            margin-bottom: 8px;
+            border: none;
+            border-bottom: 1px solid lightgray;
+            font-size: 14px;
+        }
+
+        .question,
+        .option {
+            border-bottom: none !important;
+        }
+
+        .option-con .option,
+        .explanation {
+            width: 100%;
+        }
+
+        .option-con .option { margin-bottom:  0;  }
+
+        .question {
+            padding: 0 !important;
+            font-weight: 600;
+        }
+    
+        .option-con { padding: 0 10px; }
+    }
+}
+
+.attempt-form {
+    .option-con:hover { background-color: whitesmoke; }
+    .option-con > * { cursor: pointer !important; }
+}
+
+.dblue {
+    color: $dblue !important;
+    svg { fill: $dblue !important; }
+}

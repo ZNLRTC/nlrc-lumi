@@ -1,0 +1,817 @@
+/* @font-face {
+    font-family: "nu";
+    font-weight: bold;
+    font-style: normal;
+    src: url(../Fonts/Nunito-Black.ttf);
+}
+
+@font-face {
+    font-family: "nu";
+    font-weight: bold;
+    font-style: italic;
+    src: url(../Fonts/Nunito-BlackItalic.ttf);
+}
+
+@font-face {
+    /* font-family: "nus";
+    font-weight: normal;
+    font-style: normal;
+    src: url(../Fonts/NunitoSans-Light.ttf);
+}
+
+@font-face {
+    ont-family: "nus";
+    font-weight: normal;
+    font-style: italic;
+    src: url(../Fonts/NunitoSans-LightItalic.ttf);
+}
+
+@font-face {
+    font-family: "nus";
+    font-weight: bold;
+    font-style: normal;
+    src: url(../Fonts/NunitoSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: "nus";
+    font-weight: bold;
+    font-style: italic;
+    src: url(../Fonts/NunitoSans-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: "lora";
+    font-weight: normal;
+    font-style: normal;
+    src: url(../Fonts/Lora-Regular.ttf);
+}
+
+@font-face {
+    font-family: "lora";
+    font-weight: normal;
+    font-style: italic;
+    src: url(../Fonts/Lora-Italic.ttf);
+}
+
+@font-face {
+    font-family: "lora";
+    font-weight: bold;
+    font-style: normal;
+    src: url(../Fonts/Lora-Bold.ttf);
+}
+
+@font-face {
+    font-family: "lora";
+    font-weight: bold;
+    font-style: italic;
+    src: url(../Fonts/Lora-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: "ipa";
+    font-weight: normal;
+    font-style: normal;
+    src: url(../Fonts/Andika-Regular.ttf);
+} */
+
+:root {
+    --vihree-1: #068B4F;
+    --vihree-2: #0B5732;
+    --sini-1: #0C72BA;
+    --sini-2: #085389;
+    --sini-3: #03365c;
+    --oranssi-1: #FFA12E;
+    --oranssi-2: #CB7228;
+    --oranssi-3: #7D481D;
+    --harmaa-1: #EFF1F7;
+    --harmaa-2: #BACCD7;
+    --harmaa-3: #404040;
+
+    --slate-50: rgb(248 250 252);
+    --slate-100: rgb(241 245 249);
+    --slate-200: rgb(226 232 240);
+    --slate-300: rgb(203 213 225);
+    --slate-400: rgb(148 163 184);
+    --slate-500: rgb(100 116 139);
+    --slate-600: rgb(71 85 105);
+    --slate-700: rgb(51 65 85);
+    --slate-800: rgb(30 41 59);
+    --slate-900: rgb(15 23 42);
+    --slate-950: rgb(2 6 23);
+}
+
+body {
+    counter-reset: tehtavalaskuri 0;
+}
+
+.nlrc div,
+.nlrc span,
+.nlrc section,
+.nlrc p {
+    font-size: 100%;
+    vertical-align: baseline;
+    text-align: left;
+}
+
+.nlrc address {
+    display: block;
+    font-style: italic;
+    margin: 1rem auto;
+    padding-left: 0.5rem;
+}
+
+.nlrc caption, 
+.nlrc .miniotsikko {
+    width: 100%;
+    font-variant: small-caps;
+    text-align: left;
+    font-size: .8rem;
+    /* line-height: .9rem; */
+}
+
+.nlrc code,
+.nlrc pre {
+    background-color: var(--harmaa-1);
+    padding: 1px 3px;
+    border-radius: 3px;
+    /* font-family: monospace; */
+}
+
+.dark .nlrc code,
+.dark .nlrc pre {
+    background-color: var(--slate-900);
+}
+
+.nlrc del {
+    text-decoration: line-through;
+}
+
+.nlrc details {
+    border: 1px solid var(--harmaa-2);
+    border-radius: 4px;
+    margin-top:1rem;
+}
+
+.dark .nlrc details {
+    border: 1px solid var(--slate-800);
+}
+
+.nlrc details[open] {
+    padding: .5rem;
+}
+
+.nlrc summary {
+    padding: .5rem;
+    background-color: var(--harmaa-1);
+}
+
+.dark .nlrc summary {
+    background-color: var(--slate-800);
+}
+
+.nlrc details[open] summary {
+    border-bottom: 1px solid var(--harmaa-2);
+    margin: -0.5rem -0.5rem 0;
+    margin-bottom: .5rem;
+}
+
+.dark .nlrc details[open] summary {
+    border-bottom: 1px solid var(--slate-800);
+}
+
+.nlrc h1,
+.nlrc h2,
+.nlrc h3,
+.nlrc h4,
+.nlrc h5 {
+    font-weight: 700;
+    font-style: normal;
+    margin: .6em 0;
+    line-height: 1.33em;
+}
+
+.nlrc h1 {
+    font-size: 3rem;
+}
+
+.nlrc h2 {
+    font-size: 1.25rem;
+    counter-reset: vastauslaskuri 0;
+}
+
+.nlrc h3 {
+    font-size: 1.25rem;
+    counter-increment: vastauslaskuri 1;
+}
+
+.nlrc h3::after {
+    content: " " counter(vastauslaskuri);
+}
+
+.nlrc .grammar h3::after {
+    content: "";
+}
+
+.nlrc hgroup h2 {
+    margin-bottom: 0;
+}
+
+.nlrc hgroup p {
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.nlrc hr {
+    border: .5px solid var(--harmaa-2);
+    margin: 1.5rem 0 1.2rem 0;
+}
+
+.dark .nlrc hr {
+    border: .5px solid var(--slate-900);
+}
+
+.nlrc hr.pien, 
+.nlrc hr.mini {
+    margin: 1.5rem 25% 1.2rem 25%;
+}
+
+.nlrc i, .nlrc em {
+    font-style: italic;
+}
+
+.nlrc li {
+    margin-top: .33rem;
+    margin-left: 1rem;
+}
+
+.nlrc ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+    margin-bottom: 1rem;
+}
+
+.nlrc ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    margin-bottom: 1rem;
+}
+
+.nlrc p {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    /* font-family: "lora", serif; */
+    font-style: normal;
+}
+
+.nlrc p+p {
+    text-indent: 1.5rem;
+}
+
+.nlrc.kb p+p, .nlrc.markdown p+p {
+    text-indent: 0;
+    margin-top: 1rem;
+}
+
+.nlrc section>audio {
+    margin-top: 1.4rem;
+}
+
+.nlrc sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+.nlrc .malli sup {
+    display: inline-block;
+}
+
+.nlrc table {
+    margin: 1rem 0;
+    border-spacing: .5rem 0;
+    border: none;
+    /* font-family: "nus"; */
+}
+
+.nlrc th {
+    font-weight: bold;
+}
+
+.nlrc .ala {
+    text-decoration: underline;
+}
+
+.nlrc .answer-link {
+    margin-top: 1rem;
+}
+
+.nlrc .exercise {
+    border-radius: 4px;
+    padding: .5rem;
+    margin: 1rem 0;
+    border: 1px solid var(--harmaa-2);
+}
+
+.dark .nlrc .exercise {
+    border: 1px solid var(--slate-900);
+    background-color: var(--slate-900);
+}
+
+.dark .nlrc .exercise .exercise {
+    background-color: var(--slate-800);
+}
+
+.nlrc .exercise p {
+    text-indent: 0;
+}
+
+.nlrc .exercise h2+p {
+    text-indent: 0;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.nlrc .exercise h2 {
+    margin: 0;
+}
+
+.nlrc .exercise h2 {
+    counter-increment: tehtavalaskuri 1;
+}
+
+.nlrc .exercise h2::after {
+    content: " " counter(tehtavalaskuri);
+}
+
+.nlrc .hinta {
+    font-weight: bold;
+    color: var(--oranssi-2);
+    padding-left: 0.7rem;
+}
+
+.nlrc .hinta::after {
+    content: " €";
+    color: var(--oranssi-1);
+}
+
+.nlrc .huom {
+    text-indent: 0;
+    background: rgb(255 161 46 / 0.1);
+    border-radius: 1px;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 3px var(--oranssi-2) dotted;
+    /* font-family: "nus", sans-serif; */
+}
+
+.nlrc .huom::before {
+    content: "!";
+    display: block;
+    float: right;
+    margin: 1.5rem .5rem 1rem 1rem;
+    /* font-family: "nu", sans-serif; */
+    font-size: 5rem;
+    color: var(--oranssi-1);
+}
+
+.nlrc .ipa::before,
+.nlrc .ipa::after {
+    content: "/";
+}
+
+.nlrc .kansi {
+    height: 90vh;
+    display: flex;
+    align-items: flex-end;
+}
+
+.nlrc .kuva {
+    width: 100%;
+    height: auto;
+    padding: 1rem 0;
+}
+
+.nlrc ol.dialogi>li {
+    margin-top: 1rem;
+}
+
+.nlrc ol.dialogi>li:first-child {
+    margin-top: 0;
+}
+
+.nlrc ol.dialogi ul+ul,
+.nlrc .dialogi+.dialogi {
+    font-style: italic;
+}
+
+.nlrc .dialogi ul,
+.nlrc ul.dialogi {
+    margin-top: 1rem;
+    padding-left: 1.2rem;
+    list-style-type: "– ";
+}
+
+.nlrc .dialogi ul:first-child,
+.nlrc ul.dialogi:first-child {
+    margin-top: 0rem;
+}
+
+.nlrc ul.puhujat li:nth-child(odd) {
+    margin-left: 1rem;
+    padding-left: .5rem;
+    list-style-type: "Ä: ";
+    font-style: normal;
+}
+
+.nlrc ul.puhujat li:nth-child(even) {
+    margin-left: 1rem;
+    padding-left: .5rem;
+    list-style-type: "Ö: ";
+    font-style: normal;
+}
+
+.nlrc .malli {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: space-around;
+    /* font-family: "nus", sans-serif; */
+    background-color: var(--harmaa-1);
+    width: fit-content;
+    margin: 1rem auto;
+    padding: 1rem 1.4rem;
+    padding-bottom: 1.3rem;
+    border-radius: 8px;
+    text-indent: 0;
+}
+
+.dark .nlrc .malli {
+    background-color: var(--slate-900)
+}
+
+.nlrc .malli span {
+    display: flex;
+    align-items: baseline;
+    border: 1px solid var(--harmaa-2);
+    padding: .2rem .3rem;
+    border-radius: 4px;
+    margin-top: .4rem;
+}
+
+.dark .nlrc .malli span {
+    border: 1px solid var(--slate-700);
+}
+
+.nlrc .malli .plus {
+    border: 0;
+    font-weight: bold;
+    color: var(--harmaa-2);
+    padding: .2rem 0;
+}
+
+.dark .nlrc .malli .plus {
+    color: var(--slate-700);
+}
+
+.nlrc .malli span+span {
+    margin-left: .4rem;
+}
+
+.nlrc .malli sup {
+    position: relative;
+    top: -.4rem;
+    padding-right: .3rem;
+}
+
+.nlrc .malli i {
+    padding: 0 .3rem;
+}
+
+.nlrc .menu {
+    border: 4px ridge var(--oranssi-1);
+    border-radius: 0;
+}
+
+.nlrc .menu h4 {
+    font-size: 1.3rem;
+    margin: 0;
+    color: var(--vihree-2);
+}
+
+.nlrc .menu h5 {
+    font-size: 1.1rem;
+    margin: 0;
+    margin-top: 1rem;
+    color: var(--vihree-1);
+}
+
+.nlrc .menu ul {
+    padding-left: 1rem;
+    margin: 0;
+}
+
+.nlrc .menu li {
+    list-style: none;
+    margin: 0;
+}
+
+.nlrc .miniotsikko {
+    margin-top: 1rem;
+    text-indent: 0;
+}
+
+/* ^ loput otsikon jutut määritelty captionin alla */
+.nlrc .muutettavat ol {
+    list-style-type: lower-latin;
+}
+
+.nlrc .norm {
+    font-style: normal;
+}
+
+.nlrc .pitka-viiva {
+    display: none;
+}
+
+.nlrc .sanasto,
+.nlrc .esimerkki {
+    width: 100%;
+}
+
+.nlrc .sanasto th {
+    text-align: left;
+    font-weight: bold;
+}
+
+.nlrc .sanasto td,
+.nlrc .esimerkki td {
+    padding-top: .33rem;
+    font-weight: bold;
+    vertical-align: top;
+}
+
+.nlrc .sanasto td:first-child {
+    font-weight: normal;
+    width: 50%;
+}
+
+.nlrc .nelja td:first-child {
+    max-width: 25%;
+    font-weight: bold;
+}
+
+.nlrc .esimerkki td:first-child {
+    font-weight: bold;
+    width: 30%;
+}
+
+.nlrc .sanasto td:last-child,
+.nlrc .esimerkki td:last-child {
+    font-weight: normal;
+    font-style: italic;
+}
+
+.nlrc .sisakansi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    height: 80vh;
+}
+
+.nlrc .sisakansi h1,
+.nlrc .sisakansi p {
+    text-indent: 0rem;
+    text-align: center;
+}
+
+.nlrc .sisakansi h1 {
+    line-height: 1.2;
+}
+
+.nlrc.kb table, .nlrc.kb th, .nlrc.kb td {
+    border-spacing: .5rem 0;
+    border: 1px solid var(--harmaa-2);
+    border-collapse: collapse;
+}
+
+.nlrc.kb table {
+    margin: 1rem 0;
+}
+
+.nlrc.kb th {
+    font-weight: bold;
+    background-color: var(--harmaa-2);
+}
+
+.dark .nlrc.kb th {
+    background-color: var(--slate-700);
+}
+
+.nlrc.kb td, .nlrc.kb th {
+    border: 1px solid var(--harmaa-2);
+    text-align: left;
+    padding: .3rem;
+}
+
+.dark .nlrc.kb th, .dark .nlrc.kb td {
+    border: 1px solid var(--slate-700);
+}
+
+.nlrc ul, .nlrc ol {
+    list-style-position: outside;
+    margin-inline-start: .5rem;
+}
+
+.nlrc .vari-laatikko {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin-right: .5rem;
+    vertical-align: middle;
+}
+
+.nlrc #keltainen {
+    background-color: yellow;
+}
+
+.nlrc #oranssi {
+    background-color: orange;
+}
+
+.nlrc #punainen {
+    background-color: red;
+}
+
+.nlrc #violetti {
+    background-color: violet;
+}
+
+.nlrc #sininen {
+    background-color: blue;
+}
+
+.nlrc #vihree {
+    background-color: green;
+}
+
+.nlrc #ruskee {
+    background-color: brown;
+}
+
+.nlrc #pinkki {
+    background-color: pink;
+}
+
+.nlrc #musta {
+    background-color: black;
+}
+
+.nlrc #harmaa {
+    background-color: grey;
+}
+
+.nlrc #valkoinen {
+    background-color: white;
+}
+
+.nlrc .verb tr:not(:first-of-type) td:first-of-type,
+.nlrc .verb-tr td:first-of-type {
+    padding-left: 1rem;
+}
+
+.nlrc .viiva {
+    border-top: 1px dotted var(--harmaa-2);
+}
+
+.nlrc .yli {
+    text-decoration: line-through;
+}
+
+/* Tehtävien vastausten numeroinnin korjaukset */
+.nlrc #a-u1-nimikuuntelu1 {
+    counter-reset: vastauslaskuri 7;
+}
+
+.nlrc #a-u1-katunumero {
+    counter-reset: vastauslaskuri 15;
+}
+
+/* Media queryt */
+@media only screen and (max-width: 768px) {
+
+    .nlrc .esimerkki,
+    .nlrc .nelja {
+        width: calc(100% - 1rem);
+        margin-left: 0;
+    }
+
+    .nlrc .esimerkki tbody,
+    .nlrc .esimerkki td,
+    .nlrc .nelja tbody,
+    .nlrc .nelja td {
+        display: block;
+    }
+
+    .nlrc .esimerkki td,
+    .nlrc .nelja td {
+        width: 100%;
+    }
+
+    .nlrc .esimerkki td,
+    .nlrc .nelja td,
+    .nlrc .esimerkki td:first-child,
+    .nlrc .nelja td:first-child {
+        padding: 0;
+        font-weight: normal;
+        width: 100%;
+    }
+
+    .nlrc .esimerkki tr {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(1, auto);
+        padding: 0.5rem 0;
+    }
+
+    .nlrc .nelja tr {
+        display: grid;
+        grid-template-columns: repeat(3, 33%);
+        padding: 0.15rem 0;
+    }
+
+    .nlrc .nelja td:last-of-type {
+        grid-column: 1 / span 3;
+    }
+
+    .nlrc .verb tr {
+        padding: 0.15rem 0;
+    }
+
+    .nlrc .verb tr:not(:first-of-type) td {
+        padding-left: 1rem;
+    }
+
+    .nlrc .verb tr:first-of-type td:first-of-type {
+        font-weight: bold;
+    }
+}
+
+/* unit 5:n pikaruokatehtävän menua varten */
+@media all and (min-width: 768px) {
+    .nlrc .menu {
+        column-count: 2;
+        column-rule: 1px solid var(--oranssi-1);
+        column-gap: 2rem;
+    }
+}
+
+/* Tailwind prevents lists from rendering so they can't be {!! !!}'d from the database properly without this */
+/* Don't forget to add "markdown" class to the wrapper */
+
+.markdown ul {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+.markdown ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+
+.markdown ul li, .markdown ol li {
+    padding-inline-start: 0.75rem;
+    margin-inline-start: 0.25rem;
+}
+
+/* the same as text-lg */
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+    font-size: 1.125rem; 
+    line-height: 1.75rem;
+}
+
+/* Or you can add class dark:[color-scheme:dark] though this is preferred since it just targets all date elements anyway */
+.dark input[type="date"] {
+    color-scheme: dark;
+}
+
+/* Added universal btn */
+
+.btn {
+    padding: 4px 8px;
+    border-radius: 50px;
+    display: block;
+    margin: 5px 0;
+    width: 130px;
+    text-align: center;
+    color: white;
+}

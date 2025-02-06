@@ -1,0 +1,74 @@
+$lblue: #0C72BA;
+$dblue: #03365c;
+
+.d-flex { display: flex; }
+.align-items-center { align-items: center; }
+.justify-content-center { justify-content: center !important; }
+
+.quiz-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+        
+    h1 { display: flex; }
+    h1 img { 
+        width: 35px;
+        margin-right: 1rem;
+    }
+
+    h2 {
+        display: flex;
+        align-items: center;
+
+        svg {
+            width: 25px;
+            margin-right: 5px;
+        }
+    }
+
+    a svg { 
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.note {
+    display: flex;
+    font-size: 12px;
+    color: red;
+    
+    svg {
+        fill: red;
+        width: 14px;
+        margin-right: 5px;
+    }
+}
+
+[type='radio']:disabled,
+[type='checkbox']:disabled {
+    border: gray;
+}
+
+[type='radio']:checked:disabled,
+[type='checkbox']:checked:disabled {
+    background-color: gray;
+}
+
+.perfect { background-color: #28A745;}
+.outstanding { background-color: #5CB85C;}
+.good { background-color: #007BFF;}
+.satisfactory { background-color: #FFC107;}
+.need-improvement { background-color: #FD7E14;}
+.poor { background-color: #DC3545;}
+
+.text-perfect { color: #28A745; }
+.text-outstanding { color: #5CB85C; }
+.text-good { color: #007BFF; }
+.text-satisfactory { color: #FFC107; }
+.text-need-improvement { color: #FD7E14; }
+.text-poor { color: #DC3545; }
+
+.text-gray { color: gray; }
