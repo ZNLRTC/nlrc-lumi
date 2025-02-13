@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>{{ config('app.name', 'NLRC Lumi') }}</title>
+        <title>{{ config('app.name', 'ZNLRTC Lumi') }}</title>
         
         <!-- The below are for SEO purposes -->
         <meta name="keywords" content="Zeldan Nordic Language Review and Training Center" />
