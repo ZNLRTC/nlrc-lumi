@@ -100,7 +100,7 @@
                     </div>
 
                     <div class="text-center bg-white dark:bg-nlrc-blue-900" style="max-width:30rem; width:fit-content; padding: 2rem; margin:auto; margin-top:2rem; border-radius:5px; box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);">
-                        <p>Welcome to Lumi, NLRC's online learning platform!</p>
+                        <p>Welcome to Lumi, ZNLRTC's online learning platform!</p>
                         <p class="py-6">If you have login credentials, you can log in <a class="welcome-link hover:underline" href="{{ route('login') }}">here</a> or by using the button in the top right corner.</p>
                         <p>If you do not have login credentials, kindly contact your recruitment agency. If you forgot your password, you can <a class="welcome-link hover:underline" href="{{ route('password.request') }}">reset it</a>.</p>
                     </div>
